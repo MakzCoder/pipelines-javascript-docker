@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: makzcoderpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: makzcoderpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: makzcoderpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: makzcoderpipelinesjavascriptdocker 
+          image: mycontainerregistrypro690a2.azurecr.io/makzcoderpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
